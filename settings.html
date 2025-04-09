@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="settings.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <button class="menu-btn">&#9776;</button>
+    <div class="menu">
+      <a href="homepage.html">Home Page</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="contact.html">Contact & Info</a>
+      <a href="settings.html">Settings</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Settings</h1>
+
+    <label for="velocity">Initial Velocity (m/s):</label>
+    <input type="number" id="velocity" value="5">
+
+    <label for="racketMass">Racket Mass (kg):</label>
+    <input type="number" id="racketMass" value="0.25">
+
+    <label for="coefficientRestitution">Coefficient of Restitution (e):</label>
+    <input type="number" id="coefficientRestitution" value="0.85" step="0.01" min="0" max="1">
+
+    <button id="resetButton">Reset to Default</button>
+    <button id="saveButton">Save Settings</button>
+  </div>
+</body>
+</html>
