@@ -1,4 +1,4 @@
-class ProjectileMotion {
+class Project_Cal {
   constructor(Sy, u_b, M, m, e, theta, h) {
     this.Sy = Sy;
     this.u_b = u_b;
