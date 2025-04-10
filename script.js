@@ -29,5 +29,6 @@ document.getElementById('calculateButton').addEventListener('click', function() 
   
     document.getElementById('result').innerHTML = `The ball falls in the ${zone}<br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
     document.getElementById('resultGif').src = 'result.gif';
+    console.log("01000101 01110110 01100101 01110010 01111001 01110100 01101000 01101001 01101110 01100111 00100000 01101101 01100001 01100100 01100101 00100000 01100010 01111001 00100000 01001011 01101001 01110100 01110100 01101000 01101001 01101110 01110101 01110100 00100000 01000011 01101000 01100001 01101110 01100111 01110100 01101000 01100001 01101101");
   });
   
