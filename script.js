@@ -1,23 +1,3 @@
-class ProjectileMotion {
-    constructor(height, velocity, racketMass, ballMass, restitution, angle, gravity) {
-        this.height = height;
-        this.velocity = velocity;
-        this.racketMass = racketMass;
-        this.ballMass = ballMass;
-        this.restitution = restitution;
-        this.angle = angle;
-        this.gravity = gravity;
-    }
-
-    calculate() {
-        const vx = this.velocity * Math.cos(this.angle);
-        const vy = this.velocity * Math.sin(this.angle);
-        const totalTime = (2 * vy) / this.gravity;
-        const range = vx * totalTime;
-        return { totalTime, range };
-    }
-}
-
 class Simulation {
     constructor() {
         this.init();
@@ -61,4 +41,3 @@ class Simulation {
 }
 
 new Simulation();
-
