@@ -1,31 +1,37 @@
-const defaultSettings = {
-  velocity: 2.4,
-  racketMass: 0.25,
-  coefficientRestitution: 0.85
-};
+class Settings {
+    constructor() {
+        this.defaultSettings = {
+            velocity: 2.4,
+            racketMass: 0.25,
+            coefficientRestitution: 0.85
+        };
+        this.init();
+    }
 
-function saveSettings() {
-  const velocity = parseFloat(document.getElementById('velocity').value);
-  const racketMass = parseFloat(document.getElementById('racketMass').value);
-  const coefficientRestitution = parseFloat(document.getElementById('coefficientRestitution').value);
+    init() {
+        document.getElementById('saveButton').addEventListener('click', () => this.saveSettings());
+        document.getElementById('resetButton').addEventListener('click', () => this.resetSettings());
+        this.loadSettings();
+    }
 
-  localStorage.setItem('velocity', velocity);
-  localStorage.setItem('racketMass', racketMass);
-  localStorage.setItem('coefficientRestitution', coefficientRestitution);
+    saveSettings() {
+        localStorage.setItem('velocity', document.getElementById('velocity').value);
+        localStorage.setItem('racketMass', document.getElementById('racketMass').value);
+        localStorage.setItem('coefficientRestitution', document.getElementById('coefficientRestitution').value);
+        alert('Settings saved!');
+    }
 
-  alert('Settings saved!');
+    resetSettings() {
+        document.getElementById('velocity').value = this.defaultSettings.velocity;
+        document.getElementById('racketMass').value = this.defaultSettings.racketMass;
+        document.getElementById('coefficientRestitution').value = this.defaultSettings.coefficientRestitution;
+    }
+
+    loadSettings() {
+        document.getElementById('velocity').value = localStorage.getItem('velocity') || this.defaultSettings.velocity;
+        document.getElementById('racketMass').value = localStorage.getItem('racketMass') || this.defaultSettings.racketMass;
+        document.getElementById('coefficientRestitution').value = localStorage.getItem('coefficientRestitution') || this.defaultSettings.coefficientRestitution;
+    }
 }
 
-function resetSettings() {
-  document.getElementById('velocity').value = defaultSettings.velocity;
-  document.getElementById('racketMass').value = defaultSettings.racketMass;
-  document.getElementById('coefficientRestitution').value = defaultSettings.coefficientRestitution;
-}
-
-document.getElementById('saveButton').addEventListener('click', saveSettings);
-document.getElementById('resetButton').addEventListener('click', resetSettings);
-
-// Initialize the form with saved settings if available
-document.getElementById('velocity').value = localStorage.getItem('velocity') || defaultSettings.velocity;
-document.getElementById('racketMass').value = localStorage.getItem('racketMass') || defaultSettings.racketMass;
-document.getElementById('coefficientRestitution').value = localStorage.getItem('coefficientRestitution') || defaultSettings.coefficientRestitution;
+new Settings();
