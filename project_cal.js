@@ -36,5 +36,6 @@ class Project_Cal {
     const range = this.calculateRange(u_0, alpha);
 
     return { totalTime, range };
+    console.log("Everything made by Kitthinut Changtham");
   }
 }
