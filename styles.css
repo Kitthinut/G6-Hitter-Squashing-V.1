@@ -6,12 +6,14 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: #f5f5f5;
   color: #333;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  align-items: center; /* Center body contents */
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
 /* Header (Group Title) */
@@ -36,9 +38,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* Align items from top to bottom */
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   transition: all 0.3s ease;
   opacity: 0.8;
 }
@@ -55,15 +56,18 @@ header {
   color: #4b2e83;
   cursor: pointer;
   margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: rotate(90deg); /* Rotate the button */
 }
 
 .menu {
   display: none;
   flex-direction: column;
   justify-content: flex-start;
-  /* Ensure the menu items are aligned vertically */
   margin-top: 50px;
-  /* Add some space above the menu */
 }
 
 .sidebar:hover .menu {
@@ -74,7 +78,6 @@ header {
   text-decoration: none;
   color: #4b2e83;
   padding: 15px 20px;
-  /* Increased padding for more space */
   text-align: center;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease;
@@ -90,10 +93,16 @@ header {
   padding: 20px;
   background-color: #fff;
   flex-grow: 1;
-  border-radius: 10px;
+  border-radius: 15px; /* Rounded borders */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Max width for large screens */
+  width: 100%; /* Make sure content takes full available width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
+/* Header Styling */
 h1,
 h2 {
   font-size: 28px;
@@ -110,6 +119,12 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+/* Hover effect for paragraphs */
+p:hover {
+  transform: scale(1.05); /* Slightly grow the paragraph */
+  transition: transform 0.3s ease;
 }
 
 input[type="number"],
@@ -137,26 +152,38 @@ button:hover {
 }
 
 /* Image styling */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 20px 0;
+#resultGifWrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Ensure it spans full width */
+  margin-bottom: 20px; /* Add space between the GIF and the paragraph */
 }
 
-/* Footer */
+#resultGif {
+  max-width: 500px; /* Resize the GIF to be larger */
+  height: auto;
+  display: block; /* Ensure it behaves like a block element */
+}
+
+/* Footer - Sticky at the bottom */
 footer {
   background-color: #f9c1d9;
   padding: 10px;
   text-align: center;
   font-size: 14px;
   color: #4b2e83;
+  margin-top: 30px;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 /* Additional Styling for Calculator page */
 .operators {
   display: flex;
-  gap: 10px;
+  gap: 50px !important; /* Increased gap between buttons with !important */
   margin: 20px 0;
 }
 
@@ -174,40 +201,48 @@ footer {
   background-color: #e29bb7;
 }
 
-#result {
-    font-size: 18px;
-    font-weight: bold;
-    color: #4b2e83;
-    margin-bottom: 20px;
-  }
-  
-  #resultGif {
-    max-width: 50px;
-    height: auto;
-    margin-top: 20px;
-  }
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+}
 
+#resetButton, 
+#saveButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f9c1d9;
+  color: #4b2e83;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+}
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .sidebar {
-    width: 40px;
+      width: 40px;
   }
 
   .content {
-    margin-left: 50px;
+      margin-left: 50px;
   }
 
   .menu {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    background-color: #f2c9e1;
-    width: 150px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #f2c9e1;
+      width: 150px;
   }
 
   .menu a {
-    padding: 10px;
-    text-align: left;
+      padding: 10px;
+      text-align: left;
   }
 }
