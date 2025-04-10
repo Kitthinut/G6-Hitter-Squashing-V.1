@@ -9,7 +9,7 @@ document.getElementById('calculateButton').addEventListener('click', function() 
       return;
     }
   
-    const projectile = new ProjectileMotion(1.73, velocity, racketMass, 0.2, e, angle, 10);
+    const projectile = new Project_Cal(1.73, velocity, racketMass, 0.2, e, angle, 10);
     const { totalTime, range } = projectile.calculate();
   
     let zone = '';
