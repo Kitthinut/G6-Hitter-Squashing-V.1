@@ -38,12 +38,11 @@ document.getElementById('calculateButton').addEventListener('click', function ()
 
   // Show result
   document.getElementById('result').innerHTML =
-    The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds;
+    `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
   const gifElem = document.getElementById('resultGif');
-  gifElem.src = gifs/${gifName};
+  gifElem.src = `gifs/${gifName}`;
   gifElem.style.display = 'block';
-
   // Debug logs
   console.log([DEBUG] Angle: ${angleDeg}°);
   console.log([DEBUG] Velocity: ${velocity} m/s, Racket Mass: ${racketMass} kg, Coefficient: ${e});
