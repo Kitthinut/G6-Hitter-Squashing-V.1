@@ -43,10 +43,11 @@ document.getElementById('calculateButton').addEventListener('click', function ()
   const gifElem = document.getElementById('resultGif');
   gifElem.src = `gifs/${gifName}`;
   gifElem.style.display = 'block';
+
   // Debug logs
-  console.log([DEBUG] Angle: ${angleDeg}°);
-  console.log([DEBUG] Velocity: ${velocity} m/s, Racket Mass: ${racketMass} kg, Coefficient: ${e});
-  console.log([DEBUG] Range: ${range.toFixed(3)} m, Time: ${totalTime.toFixed(3)} s, Zone: ${zone});
+  console.log(`[DEBUG] Angle: ${angleDeg}°`);
+  console.log(`[DEBUG] Velocity: ${velocity} m/s, Racket Mass: ${racketMass} kg, Coefficient: ${e}`);
+  console.log(`[DEBUG] Range: ${range.toFixed(3)} m, Time: ${totalTime.toFixed(3)} s, Zone: ${zone}`);
   console.log("CSS, JS, HTML made by 6703");
   console.log("Calculation logic by 6721");
   console.log("Graphics by 6713");
