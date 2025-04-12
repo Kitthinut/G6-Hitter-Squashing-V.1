@@ -48,5 +48,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
   console.log([DEBUG] Angle: ${angleDeg}°);
   console.log([DEBUG] Velocity: ${velocity} m/s, Racket Mass: ${racketMass} kg, Coefficient: ${e});
   console.log([DEBUG] Range: ${range.toFixed(3)} m, Time: ${totalTime.toFixed(3)} s, Zone: ${zone});
-  console.log("01000011 01010011 01010011 00101100 00100000 01001000 01010100 01001101 01001100 00101100 00100000 01001010 01010011 00101100 00100000 01100001 01101100 01101100 00100000 01101111 01100110 00100000 01101001 01110100 00100000 01100001 01110010 01100101 00100000 01101101 01100001 01100100 01100101 00100000 01100010 01111001 00100000 00110110 00110111 00110000 00110011");
+  console.log("CSS, JS, HTML made by 6703");
+  console.log("Calculation logic by 6721");
+  console.log("Graphics by 6713");
 });
