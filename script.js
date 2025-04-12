@@ -1,11 +1,12 @@
 document.getElementById('calculateButton').addEventListener('click', function () {
-  const angle = parseFloat(document.getElementById('angle').value) * (Math.PI / 180);
+  const angleDeg = parseFloat(document.getElementById('angle').value);
+  const angle = angleDeg * (Math.PI / 180); 
   const velocity = parseFloat(localStorage.getItem('velocity')) || 5;
   const racketMass = parseFloat(localStorage.getItem('racketMass')) || 0.25;
   const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
 
-  if (isNaN(angle) || isNaN(velocity)) {
-    alert("Please enter valid values for angle and velocity.");
+  if (isNaN(angleDeg) || isNaN(velocity)) {
+    alert("Please enter valid values for angle.");
     return;
   }
 
@@ -35,10 +36,12 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = ''; // no gif
   }
 
-  document.getElementById('result').innerHTML = 
+  // Update result text
+  document.getElementById('result').innerHTML =
     `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
   const gifElem = document.getElementById('resultGif');
+
   if (gifName !== '') {
     gifElem.src = `gifs/${gifName}`;
     gifElem.style.display = 'block';
@@ -46,5 +49,9 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifElem.style.display = 'none';
   }
 
+  // Debug logs
+  console.log(`[DEBUG] Angle: ${angleDeg}°`);
+  console.log(`[DEBUG] Velocity: ${velocity} m/s, Racket Mass: ${racketMass} kg, Coefficient: ${e}`);
+  console.log(`[DEBUG] Range: ${range.toFixed(3)} m, Time: ${totalTime.toFixed(3)} s, Zone: ${zone}`);
   console.log("Everything made by Kitthinut Changtham 💖");
 });
