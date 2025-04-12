@@ -1,23 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const calculateButton = document.getElementById('calculateButton');
+document.getElementById('calculateButton').addEventListener('click', function () {
+  const angleDeg = parseFloat(document.getElementById('angle').value);
+  const angle = angleDeg * (Math.PI / 180); // radians
+  const velocity = parseFloat(localStorage.getItem('velocity')) || 5;
+  const racketMass = parseFloat(localStorage.getItem('racketMass')) || 0.25;
+  const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
 
-  calculateButton.addEventListener('click', () => {
-    const angleInput = document.getElementById('angle').value;
-    const angle = parseFloat(angleInput);
+  if (isNaN(angleDeg) || isNaN(velocity)) {
+    alert("Please enter valid values for angle and velocity.");
+    return;
+  }
 
-    if (isNaN(angle)) {
-      alert("Please enter a valid angle.");
-      return;
-    }
-
-    // Constants
-    const velocity = 20; // example value in m/s
-    const g = 9.81;
-
-    // Calculations
-    const radian = angle * (Math.PI / 180);
-    const range = (Math.pow(velocity, 2) * Math.sin(2 * radian)) / g;
-    const totalTime = (2 * velocity * Math.sin(radian)) / g;
+  const projectile = new Project_Cal(1.73, velocity, racketMass, 0.2, e, angle, 10);
+  const { totalTime, range } = projectile.calculate();
 
     // Determine zone and gif
     let zone = '';
