@@ -6,7 +6,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
   const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
 
   if (isNaN(angleDeg) || isNaN(velocity)) {
-    alert("Please enter valid values for angle.");
+    alert("Please enter valid values for angle and velocity.");
     return;
   }
 
@@ -33,21 +33,17 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = 'red.gif';
   } else {
     zone = 'Out of Range';
-    gifName = ''; // no gif
+    gifName = 'out.gif'; // yes we showing gif for this too!
   }
 
   // Update result text
   document.getElementById('result').innerHTML =
     `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
+  // Update the gif
   const gifElem = document.getElementById('resultGif');
-
-  if (gifName !== '') {
-    gifElem.src = `gifs/${gifName}`;
-    gifElem.style.display = 'block';
-  } else {
-    gifElem.style.display = 'none'; // hide the gif
-  }
+  gifElem.src = `gifs/${gifName}`;
+  gifElem.style.display = 'block';
 
   // Debug logs
   console.log(`[DEBUG] Angle: ${angleDeg}°`);
