@@ -36,18 +36,13 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = 'out.gif'; 
   }
 
-  // Update result text
+  // Show result
   document.getElementById('result').innerHTML =
     `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
   const gifElem = document.getElementById('resultGif');
-
-  if (gifName !== '') {
-    gifElem.src = `gifs/${gifName}`;
-    gifElem.style.display = 'block';
-  } else {
-    gifElem.style.display = 'none';
-  }
+  gifElem.src = `gifs/${gifName}`;
+  gifElem.style.display = 'block';
 
   // Debug logs
   console.log(`[DEBUG] Angle: ${angleDeg}°`);
