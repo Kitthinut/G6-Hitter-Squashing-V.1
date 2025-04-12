@@ -33,7 +33,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = 'red.gif';
   } else {
     zone = 'Out of Range';
-    gifName = ''; // no gif
+    gifName = 'out.gif'; 
   }
 
   // Update result text
