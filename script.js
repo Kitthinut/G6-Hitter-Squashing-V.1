@@ -14,7 +14,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
   const { totalTime, range } = projectile.calculate();
 
   let zone = '';
-  let gifName = 'neutral.gif';
+  let gifName = '';
 
   if (range >= 7.50 && range < 11.30) {
     zone = 'Light Blue Zone';
@@ -33,13 +33,20 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = 'red.gif';
   } else {
     zone = 'Out of Range';
+    gifName = ''; // don't show gif
   }
 
-  const gifPath = `gifs/${gifName}`;
+  // Update result text always
   document.getElementById('result').innerHTML =
     `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
-  document.getElementById('resultGif').src = gifPath;
+  // Only update the gif if it's not Out of Range
+  if (gifName !== '') {
+    document.getElementById('resultGif').src = `gifs/${gifName}`;
+  } else {
+    // Optionally reset to neutral or keep as-is
+    document.getElementById('resultGif').src = 'gifs/neutral.gif';
+  }
 
   // Debug logs
   console.log(`[DEBUG] Angle: ${angleDeg}°`);
