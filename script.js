@@ -1,12 +1,12 @@
 document.getElementById('calculateButton').addEventListener('click', function () {
   const angleDeg = parseFloat(document.getElementById('angle').value);
-  const angle = angleDeg * (Math.PI / 180); // radians
+  const angle = angleDeg * (Math.PI / 180); 
   const velocity = parseFloat(localStorage.getItem('velocity')) || 5;
   const racketMass = parseFloat(localStorage.getItem('racketMass')) || 0.25;
   const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
 
   if (isNaN(angleDeg) || isNaN(velocity)) {
-    alert("Please enter valid values for angle and velocity.");
+    alert("Please enter valid values for angle");
     return;
   }
 
