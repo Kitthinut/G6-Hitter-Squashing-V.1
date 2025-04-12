@@ -1,14 +1,38 @@
 document.getElementById('calculateButton').addEventListener('click', function () {
-  const angleDeg = parseFloat(document.getElementById('angle').value);
-  const angle = angleDeg * (Math.PI / 180); 
-  const velocity = parseFloat(localStorage.getItem('velocity')) || 5;
-  const racketMass = parseFloat(localStorage.getItem('racketMass')) || 0.25;
-  const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
+// Dark mode toggle functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
 
-  if (isNaN(angleDeg) || isNaN(velocity)) {
-    alert("Please enter valid values for angle.");
-    return;
+  // Load mode from localStorage (default is light mode if not set)
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode'); // Apply dark mode
   }
+
+  // Toggle dark mode on button click
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      body.classList.toggle('dark-mode'); // Toggle the dark mode class
+      const isDarkModeEnabled = body.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDarkModeEnabled ? 'enabled' : 'disabled'); // Save the preference
+    });
+  }
+
+  // Calculation logic for projectile
+  const calcBtn = document.getElementById('calculateButton');
+  if (calcBtn) {
+    calcBtn.addEventListener('click', function () {
+      const angleDeg = parseFloat(document.getElementById('angle').value);
+      const angle = angleDeg * (Math.PI / 180); 
+      const velocity = parseFloat(localStorage.getItem('velocity')) || 5;
+      const racketMass = parseFloat(localStorage.getItem('racketMass')) || 0.25;
+      const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
+
+      if (isNaN(angleDeg)) {
+        alert("Please enter a valid angle.");
+        return;
+      }
 
   const projectile = new Project_Cal(1.73, velocity, racketMass, 0.2, e, angle, 10);
   const { totalTime, range } = projectile.calculate();
