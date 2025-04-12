@@ -6,7 +6,7 @@ document.getElementById('calculateButton').addEventListener('click', function ()
   const e = parseFloat(localStorage.getItem('coefficientRestitution')) || 0.85;
 
   if (isNaN(angleDeg) || isNaN(velocity)) {
-    alert("Please enter valid values for angle and velocity.");
+    alert("Please enter valid values for angle.");
     return;
   }
 
