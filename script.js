@@ -33,19 +33,20 @@ document.getElementById('calculateButton').addEventListener('click', function ()
     gifName = 'red.gif';
   } else {
     zone = 'Out of Range';
-    gifName = ''; // don't show gif
+    gifName = ''; // no gif
   }
 
-  // Update result text always
+  // Update result text
   document.getElementById('result').innerHTML =
     `The ball falls in the <b>${zone}</b><br>Distance: ${range.toFixed(3)} meters<br>Total Time: ${totalTime.toFixed(3)} seconds`;
 
-  // Only update the gif if it's not Out of Range
+  const gifElem = document.getElementById('resultGif');
+
   if (gifName !== '') {
-    document.getElementById('resultGif').src = `gifs/${gifName}`;
+    gifElem.src = `gifs/${gifName}`;
+    gifElem.style.display = 'block';
   } else {
-    // Optionally reset to neutral or keep as-is
-    document.getElementById('resultGif').src = 'gifs/neutral.gif';
+    gifElem.style.display = 'none'; // hide the gif
   }
 
   // Debug logs
