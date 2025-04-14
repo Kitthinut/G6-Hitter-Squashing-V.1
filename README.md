@@ -2,14 +2,16 @@
 
 ## Overview
 
-The **G6 Hitter Squashing Simulation** is a web application designed to simulate the distance traveled by a ball when hit with an initial velocity, considering factors like the coefficient of restitution. This simulation provides an interactive way for users to visualize and understand the relationship between physics principles and motion. The web app features a cute and intuitive user interface, designed to make learning about these concepts engaging and enjoyable.
+The G6 Hitter Squashing Simulation is a web-based application created as an assignment for the FIBO (Institute of Field Robotics) subject **Robotics Studio I: Science in Motion (FRA163)**. The web app simulates the distance a ball travels when hit with a specific angle, with other factors such as initial velocity, racket mass, and coefficient of restitution being customizable through the settings. This project is designed with a cute and user-friendly interface to make learning about physics and motion more engaging and accessible.
 
 ## Features
 
-- **Interactive Calculation**: Input the initial velocity, racket mass, and coefficient of restitution to simulate the ball's distance.
-- **Real-time Results**: Instantly see the results of your input and how changing different variables affects the ball's trajectory.
-- **Cute UX/UI**: Designed with a fun and friendly aesthetic to make the simulation more engaging and accessible for users of all ages.
-- **Custom Animations**: Includes animations designed in Figma to enhance the user experience and make the simulation more visually appealing.
+- **Angle-based Calculation:** Input the angle at which the ball is hit to calculate the distance it travels. Other factors such as initial velocity, racket mass, and coefficient of restitution are adjustable in the settings.
+- **Customizable Settings:** Modify various factors like velocity and mass in the settings to see how they affect the simulation without needing to re-enter the angle.
+- **Interactive and Cute UX/UI:** Designed with a friendly aesthetic to provide a fun and engaging experience for users of all ages.
+- **Animations by 6713:** The simulation includes animations designed by my dear friend 6713, making the experience more visually appealing and dynamic.
+- **Calculation Logic by 6721:** The core logic behind the calculations, including how the ball's trajectory is determined, is based on the work by 6721, ensuring accurate and realistic results.
+
 
 ## How to Use
 
