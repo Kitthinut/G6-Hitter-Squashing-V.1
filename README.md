@@ -1,36 +1,38 @@
-# G6 Hitter Squashing Simulation 🏓🎯
+# G6 Hitter Squashing Simulation 🏓🌸🎯
 
 ## Overview 🌟
 
-The G6 Hitter Squashing Simulation is a web-based application created as an assignment for the FIBO (Institute of Field Robotics) subject **Robotics Studio I: Science in Motion (FRA163)**. The web app simulates the distance a ball travels when hit with a specific angle 🎾, with other factors such as initial velocity, racket mass, and coefficient of restitution being customizable through the settings ⚙️. This project is designed with a cute and user-friendly interface 💖 to make your trauma simulation just like a rainbow 🌈.
+The **G6 Hitter Squashing Simulation** is a web-based application created as an assignment for the FIBO (Institute of Field Robotics) subject **Robotics Studio I: Science in Motion (FRA163)**. The web app simulates the distance a ball travels when hit with a specific angle 🎾, with other factors such as initial velocity, racket mass, and coefficient of restitution being customizable through the settings ⚙️. This project is designed with a cute and user-friendly interface 💖 to make your trauma simulation just like a rainbow 🌈 and a sip of matcha on a spring day 🍵❀
 
 ## Features ✨
 
-- **Angle-based Calculation 🔄**: Input the angle at which the ball is hit to calculate the distance it travels. Other factors such as initial velocity, racket mass, and coefficient of restitution are adjustable in the settings.
-- **Customizable Settings ⚙️**: Modify various factors like velocity and mass in the settings to see how they affect the simulation.
-- **Interactive and Cute UX/UI 🐾**: Designed with a friendly aesthetic to provide a fun and engaging experience for users of all ages.
-- **Animations by 6713 🎨**: The simulation includes animations designed by my dear friend 6713, making the experience more visually appealing and dynamic.
-- **Calculation Logic by 6721 🧠**: The core logic behind the calculations, including how the ball's trajectory is determined, is based on the work by 6721, ensuring accurate and realistic results.
+- **Angle-based Calculation 🔄**: Input the angle at which the ball is hit to calculate the distance it travels (๑˃ᴗ˂)ﻭ ✧ Other factors are adjustable in the settings for your convenience.
+- **Customizable Settings ⚙️**: Adjust velocity, mass, and more through a separate settings page to fine-tune your simulation 🌸.
+- **Interactive and Cute UX/UI 🐾**: Styled with an adorable and friendly vibe, perfect for users of all ages (｡♥‿♥｡).
+- **Animations by 6713 🎨**: Lovely animations made by my talented friend 6713 to make the simulation extra magical 🌈✨.
+- **Calculation Logic by 6721 🧠**: Physics made cute and accurate by the genius 6721 — so your results are both reliable and fun ( •̀ ω •́ )✧.
 
 ## How to Use 📝
 
-1. **Homepage 🏠**: The homepage introduces the application and provides easy access to all the main pages, including the simulation, contact information, and settings.
-2. **Calculation Page 🧮**: Enter values for the initial velocity, racket mass, and coefficient of restitution to simulate and view the ball's distance.
-3. **Contact Page 📬**: Provides users with information on how to get in touch for support or inquiries.
-4. **Settings Page ⚙️**: Allows users to adjust and reset simulation settings to their desired values.
+1. **Homepage 🏠**: Welcome to the app! Navigate to other pages easily from here 🌸.
+2. **Calculation Page 📐**: Input only the **angle** of the hit and see how far the ball flies (ฅ^•ﻌ•^ฅ).
+3. **Contact Page 📬**: Need help? Want to collab? Find contact info here ꒰⑅ᵕ༚ᵕ꒱˖♡.
+4. **Settings Page 🍵**: Tweak the physics parameters like initial velocity, racket mass, and restitution to customize the behavior just how you like it (≧◡≦) ♡
 
 ## Technologies Used 💻
 
-- **HTML** for the structure of the app
-- **CSS** for styling and responsiveness
-- **JavaScript** for the logic behind the simulation and user interactions
+- **HTML** for structure 🏗️  
+- **CSS** for stylish cuteness ✨  
+- **JavaScript** for smart, interactive magic (ง •̀_•́)ง
 
 ## How to Access 🌐
 
-You can access the live version of the app through the following link:
-
-[Visit G6 Hitter Squashing Simulation](https://kitthinut.github.io/G6_Hitter_Squashing_Simulation/)
+Check out the live version here:  
+👉 [**Visit G6 Hitter Squashing Simulation**](https://kitthinut.github.io/G6_Hitter_Squashing_Simulation/) 🎀
 
 ## Contributing 🤝
 
-Feel free to fork the repository, create an issue, or submit a pull request if you have any suggestions or improvements to make! Contributions are welcome 💖.
+Want to help this project grow like a cherry blossom tree? 🌸✨  
+Feel free to fork the repo, create an issue, or make a pull request!  
+All kinds of contributions are welcome ~ ヾ(＾∇＾)
+
