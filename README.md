@@ -33,7 +33,3 @@ You can access the live version of the app through the following link:
 ## Contributing
 
 Feel free to fork the repository, create an issue, or submit a pull request if you have any suggestions or improvements to make! Contributions are welcome.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
