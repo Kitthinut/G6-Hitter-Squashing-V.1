@@ -2,7 +2,7 @@
 
 ## Overview 🌟
 
-The G6 Hitter Squashing Simulation is a web-based application created as an assignment for the FIBO (Institute of Field Robotics) subject **Robotics Studio I: Science in Motion (FRA163)**. The web app simulates the distance a ball travels when hit with a specific angle 🎾, with other factors such as initial velocity, racket mass, and coefficient of restitution being customizable through the settings ⚙️. This project is designed with a cute and user-friendly interface 💖 to make learning about physics and motion more engaging and accessible 🌈.
+The G6 Hitter Squashing Simulation is a web-based application created as an assignment for the FIBO (Institute of Field Robotics) subject **Robotics Studio I: Science in Motion (FRA163)**. The web app simulates the distance a ball travels when hit with a specific angle 🎾, with other factors such as initial velocity, racket mass, and coefficient of restitution being customizable through the settings ⚙️. This project is designed with a cute and user-friendly interface 💖 to make your trauma simulation just like a rainbow 🌈.
 
 ## Features ✨
 
