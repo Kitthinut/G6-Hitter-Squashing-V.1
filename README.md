@@ -7,7 +7,7 @@ The G6 Hitter Squashing Simulation is a web-based application created as an assi
 ## Features ✨
 
 - **Angle-based Calculation 🔄**: Input the angle at which the ball is hit to calculate the distance it travels. Other factors such as initial velocity, racket mass, and coefficient of restitution are adjustable in the settings.
-- **Customizable Settings ⚙️**: Modify various factors like velocity and mass in the settings to see how they affect the simulation without needing to re-enter the angle.
+- **Customizable Settings ⚙️**: Modify various factors like velocity and mass in the settings to see how they affect the simulation.
 - **Interactive and Cute UX/UI 🐾**: Designed with a friendly aesthetic to provide a fun and engaging experience for users of all ages.
 - **Animations by 6713 🎨**: The simulation includes animations designed by my dear friend 6713, making the experience more visually appealing and dynamic.
 - **Calculation Logic by 6721 🧠**: The core logic behind the calculations, including how the ball's trajectory is determined, is based on the work by 6721, ensuring accurate and realistic results.
